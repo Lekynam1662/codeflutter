@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../utils/ResponsiveLayout.dart';
-final Uri _url = Uri.parse('https://flutter.dev');
+final Uri _url = Uri.parse('https://www.facebook.com/CoPhucHue');
 class trainghiem1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -27,6 +27,7 @@ class trainghiem1 extends StatelessWidget {
           FractionallySizedBox(
             alignment: Alignment.centerRight,
             widthFactor: .5,
+           heightFactor: 0.70,
             child: Padding(
               padding: EdgeInsets.only(right: 40),
               child: ClipRRect(
@@ -165,6 +166,7 @@ class SmallChild extends StatelessWidget {
                       child: const Text(
                         'Xem chi tiết',
                       )),
+                       SizedBox(height: 10,),
             Center(
               child: ClipRRect(
                   borderRadius: BorderRadius.circular(10.0),

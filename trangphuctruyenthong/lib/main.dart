@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:trangphuctruyenthong/trangphuc/trainghiem.dart';
 import 'package:trangphuctruyenthong/trangphuc/trainghiem1.dart';
 import 'package:trangphuctruyenthong/trangphuc/trainghiem2.dart';
-import 'widgets/navbar.dart';
+import 'package:trangphuctruyenthong/widgets/menu_drawer/menu_drawer.dart';
+import 'package:trangphuctruyenthong/widgets/navigation_bar_tablet/navigation_bar_tablet.dart/navigation_bar_tablet.dart';
 import 'utils/responsiveLayout.dart';
 
 void main() => runApp(MaterialApp(
-      title: 'Flutter Landing Page',
+      title: 'TrangphuctruyenthongHue',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -17,24 +18,48 @@ void main() => runApp(MaterialApp(
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var screensiz = MediaQuery.of(context).size;
     return Container(
-       decoration: BoxDecoration(
-              gradient: LinearGradient(
-            begin: Alignment.topRight,
-            end: Alignment.bottomLeft,
-            colors: [
-              Colors.white,
-              Colors.purple,
-              Colors.orange,
-              Colors.white,
-              Colors.white,
-            ],
-          )),
+      decoration: BoxDecoration(
+          gradient: LinearGradient(
+        begin: Alignment.topRight,
+        end: Alignment.bottomLeft,
+        colors: [
+          Colors.white,
+          Colors.purple,
+          Colors.orange,
+          Colors.white,
+          Colors.white,
+        ],
+      )),
       child: Scaffold(
+        appBar: ResponsiveLayout.isSmallScreen(context)
+            ? AppBar(
+                iconTheme: IconThemeData(color: Color.fromARGB(255, 8, 0, 0)),
+                backgroundColor: Color.fromARGB(255, 136, 10, 161),
+                elevation: 0,
+                centerTitle: true,
+                title: Text(
+                  "WelcomeHome",
+                  style: TextStyle(
+                      fontSize: 24,
+                      color: Color.fromARGB(255, 0, 5, 8),
+                      fontWeight: FontWeight.w200),
+                ),
+              )
+            : PreferredSize(
+                child: NavigationBarTabletDesktop(),
+                preferredSize: Size(screensiz.width, 200)),
+        drawer: MenuDrawer(),
         backgroundColor: Colors.transparent,
         body: SingleChildScrollView(
           child: Column(
-            children: <Widget>[navbar(), Body(),trainghiem(),trainghiem1(), trainghiem2()],
+            children: <Widget>[
+              Body(),
+              trainghiem(),
+              trainghiem1(),
+              trainghiem2()
+            ],
           ),
         ),
       ),
@@ -56,14 +81,17 @@ class Body extends StatelessWidget {
 class LargeChild extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+     final Size size = MediaQuery.of(context).size;
     return SizedBox(
-      height: 380,
+       width: size.width,
+      height: size.height,
       child: Stack(
         fit: StackFit.expand,
         children: <Widget>[
           FractionallySizedBox(
             alignment: Alignment.centerRight,
             widthFactor: .4,
+            heightFactor: 0.7,
             child: Padding(
               padding: EdgeInsets.only(right: 40),
               child: ClipRRect(
@@ -115,6 +143,9 @@ class LargeChild extends StatelessWidget {
                         fontSize: 18,
                         color: Color.fromARGB(255, 1, 0, 10)),
                   )),
+                    const SizedBox(
+                    height: 30,
+                  ),
                 ],
               ),
             ),
@@ -139,26 +170,29 @@ class SmallChild extends StatelessWidget {
               style: TextStyle(
                   fontSize: 40,
                   color: Colors.black,
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.w800,
                   fontFamily: "Montserrat-Regular"),
             ),
             RichText(
               text: TextSpan(
-                text: 'Kinh Đô Xưa-',
+                text: 'Kinh Đô Xưa - ',
                 style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 40,
+                    fontWeight: FontWeight.w800,
+                    fontFamily: "Montserrat-Regular",
+                    fontSize: 35,
                     color: Colors.black),
                 children: <TextSpan>[
                   TextSpan(
                       text: 'Trải nghiệm mới',
                       style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 40,
+                         fontWeight: FontWeight.w800,
+                         fontFamily: "Montserrat-Regular",
+                          fontSize: 35,
                           color: Colors.black)),
                 ],
               ),
             ),
+            SizedBox(height: 10,),
             RichText(
                 text: TextSpan(
               text:

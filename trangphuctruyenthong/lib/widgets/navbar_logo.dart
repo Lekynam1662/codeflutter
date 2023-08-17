@@ -9,7 +9,7 @@ class NavBarLogo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 40,
-      width: 75,
+      width: 100,
       child: Image.network(
                     "assets/husc.png",
     ));

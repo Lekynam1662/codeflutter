@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:trangphuctruyenthong/utils/ResponsiveLayout.dart';
 import 'package:url_launcher/url_launcher.dart';
-final Uri _url = Uri.parse('https://flutter.dev');
+final Uri _url = Uri.parse('https://www.facebook.com/thueaodaitaihue');
 
 class trainghiem extends StatelessWidget {
   @override
@@ -26,7 +26,9 @@ class LargeChild extends StatelessWidget {
         children: <Widget>[
           FractionallySizedBox(
             alignment: Alignment.centerLeft,
-            widthFactor: .5,
+             widthFactor: .5,
+             heightFactor: 0.8,
+            
             child: Padding(
               padding: EdgeInsets.only(right: 40),
               child: ClipRRect(
@@ -122,20 +124,22 @@ class SmallChild extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     fontFamily: "Montserrat-Regular",
                     color: Color.fromARGB(255, 0, 0, 3))),
+                     SizedBox(height: 10,),
             RichText(
               text: TextSpan(
                 text:
-                    '                                                                                                                                      Địa Chỉ: 123 Thạch Hãn, Phường Thuận Hòa, Thành Phố Huế ',
+                    'Địa Chỉ: 123 Thạch Hãn, Phường Thuận Hòa, Thành Phố Huế ',
                 style: TextStyle(
                     fontSize: 15,
                     fontWeight: FontWeight.bold,
                     color: Color.fromARGB(255, 3, 0, 3)),
               ),
             ),
+             SizedBox(height: 10,),
             RichText(
               text: TextSpan(
                 text:
-                    '                                                                                                                                      Hotline: 0777 978 112',
+                    'Hotline: 0777 978 112',
                 style: TextStyle(
                     fontSize: 15,
                     fontWeight: FontWeight.bold,
@@ -165,6 +169,7 @@ class SmallChild extends StatelessWidget {
                       child: const Text(
                         'Xem chi tiết',
                       )),
+                       SizedBox(height: 10,),
             Center(
               child: ClipRRect(
                   borderRadius: BorderRadius.circular(10.0),

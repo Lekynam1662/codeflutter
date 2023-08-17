@@ -3,7 +3,7 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 380,
+      height: 400,
       child: Stack(
         fit: StackFit.expand,
         children: <Widget>[
@@ -20,6 +20,9 @@ class Body extends StatelessWidget {
                   )),
             ),
           ),
+               const SizedBox(
+                    height: 12,
+                  ),
           FractionallySizedBox(
             alignment: Alignment.centerLeft,
             widthFactor: .5,
@@ -61,6 +64,7 @@ class Body extends StatelessWidget {
                         fontSize: 18,
                         color: Color.fromARGB(255, 1, 0, 10)),
                   )),
+               
                 ],
               ),
             ),
