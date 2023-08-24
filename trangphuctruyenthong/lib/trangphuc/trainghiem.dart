@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:trangphuctruyenthong/utils/ResponsiveLayout.dart';
 import 'package:url_launcher/url_launcher.dart';
+
 final Uri _url = Uri.parse('https://www.facebook.com/thueaodaitaihue');
 
 class trainghiem extends StatelessWidget {
@@ -26,9 +27,8 @@ class LargeChild extends StatelessWidget {
         children: <Widget>[
           FractionallySizedBox(
             alignment: Alignment.centerLeft,
-             widthFactor: .5,
-             heightFactor: 0.8,
-            
+            widthFactor: .5,
+            heightFactor: 0.8,
             child: Padding(
               padding: EdgeInsets.only(right: 40),
               child: ClipRRect(
@@ -49,16 +49,16 @@ class LargeChild extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Text("Áo Dài Dạ Hội Hoàng Quyên",
+                  const Text("Áo Dài Dạ Hội Hoàng Quyên",
                       style: TextStyle(
                           fontSize: 40,
                           fontWeight: FontWeight.bold,
                           fontFamily: "Montserrat-Regular",
                           color: Color.fromARGB(255, 0, 0, 3))),
                   RichText(
-                    text: TextSpan(
+                    text: const TextSpan(
                       text:
-                          '                                                                                                                                      Địa Chỉ: 123 Thạch Hãn, Phường Thuận Hòa, Thành Phố Huế ',
+                          'Địa Chỉ: 123 Thạch Hãn, Phường Thuận Hòa, Thành Phố Huế ',
                       style: TextStyle(
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
@@ -66,9 +66,9 @@ class LargeChild extends StatelessWidget {
                     ),
                   ),
                   RichText(
-                    text: TextSpan(
+                    text: const TextSpan(
                       text:
-                          '                                                                                                                                      Hotline: 0777 978 112',
+                          ' Hotline: 0777 978 112',
                       style: TextStyle(
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
@@ -76,9 +76,9 @@ class LargeChild extends StatelessWidget {
                     ),
                   ),
                   RichText(
-                    text: TextSpan(
+                    text: const TextSpan(
                       text:
-                          "                                                                                                                                       Mở cửa: 7h30 - 21h ",
+                          "Mở cửa: 7h30 - 21h ",
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 15,
@@ -94,7 +94,7 @@ class LargeChild extends StatelessWidget {
                         onPrimary: Colors.white,
                       ),
                       onPressed: () {
-                         launchUrl(_url);
+                        launchUrl(_url);
                       },
                       child: const Text(
                         'Xem chi tiết',
@@ -118,15 +118,17 @@ class SmallChild extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text("Áo Dài Dạ Hội Hoàng Quyên",
+            const Text("Áo Dài Dạ Hội Hoàng Quyên",
                 style: TextStyle(
                     fontSize: 40,
                     fontWeight: FontWeight.bold,
                     fontFamily: "Montserrat-Regular",
                     color: Color.fromARGB(255, 0, 0, 3))),
-                     SizedBox(height: 10,),
+            const SizedBox(
+              height: 10,
+            ),
             RichText(
-              text: TextSpan(
+              text: const TextSpan(
                 text:
                     'Địa Chỉ: 123 Thạch Hãn, Phường Thuận Hòa, Thành Phố Huế ',
                 style: TextStyle(
@@ -135,11 +137,12 @@ class SmallChild extends StatelessWidget {
                     color: Color.fromARGB(255, 3, 0, 3)),
               ),
             ),
-             SizedBox(height: 10,),
+            const SizedBox(
+              height: 10,
+            ),
             RichText(
-              text: TextSpan(
-                text:
-                    'Hotline: 0777 978 112',
+              text: const TextSpan(
+                text: 'Hotline: 0777 978 112',
                 style: TextStyle(
                     fontSize: 15,
                     fontWeight: FontWeight.bold,
@@ -147,7 +150,7 @@ class SmallChild extends StatelessWidget {
               ),
             ),
             RichText(
-                text: TextSpan(
+                text: const TextSpan(
               text:
                   "                                                                                                                                       Mở cửa: 7h30 - 21h ",
               style: TextStyle(
@@ -156,20 +159,22 @@ class SmallChild extends StatelessWidget {
                   color: Color.fromARGB(255, 1, 0, 10)),
             )),
             const SizedBox(
-                    height: 12,
-                  ),
-                  ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        primary: Colors.black,
-                        onPrimary: Colors.white ,
-                      ),
-                      onPressed: () {
-                        launchUrl(_url);
-                      },
-                      child: const Text(
-                        'Xem chi tiết',
-                      )),
-                       SizedBox(height: 10,),
+              height: 12,
+            ),
+            ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.black,
+                  onPrimary: Colors.white,
+                ),
+                onPressed: () {
+                  launchUrl(_url);
+                },
+                child: const Text(
+                  'Xem chi tiết',
+                )),
+            const SizedBox(
+              height: 10,
+            ),
             Center(
               child: ClipRRect(
                   borderRadius: BorderRadius.circular(10.0),
@@ -179,10 +184,10 @@ class SmallChild extends StatelessWidget {
                     fit: BoxFit.cover,
                   )),
             ),
-            SizedBox(
+            const SizedBox(
               height: 32,
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             )
           ],

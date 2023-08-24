@@ -9,7 +9,7 @@ class MenuDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       child: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
             gradient: LinearGradient(
           begin: Alignment.topRight,
           end: Alignment.bottomLeft,
@@ -28,7 +28,7 @@ class MenuDrawer extends StatelessWidget {
             children: [
               InkWell(
                   onTap: () {},
-                  child: Column(
+                  child: const Column(
                     children: [
                       Text(
                         'Huế',
@@ -46,52 +46,53 @@ class MenuDrawer extends StatelessWidget {
                       )
                     ],
                   )),
-              Padding(
-                padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+              const Padding(
+                padding: EdgeInsets.only(top: 5.0, bottom: 5.0),
                 child: Divider(
-                  color: const Color.fromARGB(255, 255, 255, 255),
+                  color: Color.fromARGB(255, 255, 255, 255),
                   thickness: 2,
                 ),
               ),
               InkWell(
                 onTap: () {},
-                child: Text(
+                child: const Text(
                   'Trang Phục',
-                  style: TextStyle(color: const Color.fromARGB(255, 0, 0, 0), fontSize: 22),
+                  style: TextStyle(color: Color.fromARGB(255, 0, 0, 0),
+                   fontSize: 22),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+              const Padding(
+                padding: EdgeInsets.only(top: 5.0, bottom: 5.0),
                 child: Divider(
-                  color: const Color.fromARGB(255, 253, 254, 255),
+                  color: Color.fromARGB(255, 253, 254, 255),
                   thickness: 2,
                 ),
               ),
               InkWell(
                 onTap: () {},
-                child: Text(
+                child: const Text(
                   'Món ăn',
-                  style: TextStyle(color: const Color.fromARGB(255, 0, 0, 0), fontSize: 22),
+                  style: TextStyle(color: Color.fromARGB(255, 0, 0, 0), fontSize: 22),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+              const Padding(
+                padding: EdgeInsets.only(top: 5.0, bottom: 5.0),
                 child: Divider(
-                  color: const Color.fromARGB(255, 255, 255, 255),
+                  color: Color.fromARGB(255, 255, 255, 255),
                   thickness: 2,
                 ),
               ),
               InkWell(
                 onTap: () {},
-                child: Text(
+                child: const Text(
                   'Di Tích',
-                  style: TextStyle(color: const Color.fromARGB(255, 0, 0, 0), fontSize: 22),
+                  style: TextStyle(color: Color.fromARGB(255, 0, 0, 0), fontSize: 22),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+              const Padding(
+                padding: EdgeInsets.only(top: 5.0, bottom: 5.0),
                 child: Divider(
-                  color: const Color.fromARGB(255, 255, 255, 255),
+                  color: Color.fromARGB(255, 255, 255, 255),
                   thickness: 2,
                 ),
               ),

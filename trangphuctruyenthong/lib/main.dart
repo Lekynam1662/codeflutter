@@ -20,7 +20,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     var screensiz = MediaQuery.of(context).size;
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
           gradient: LinearGradient(
         begin: Alignment.topRight,
         end: Alignment.bottomLeft,
@@ -39,7 +39,7 @@ class HomePage extends StatelessWidget {
                 backgroundColor: Color.fromARGB(255, 136, 10, 161),
                 elevation: 0,
                 centerTitle: true,
-                title: Text(
+                title: const Text(
                   "WelcomeHome",
                   style: TextStyle(
                       fontSize: 24,

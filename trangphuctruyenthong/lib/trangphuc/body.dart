@@ -32,14 +32,14 @@ class Body extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Text("Huế!",
+                  const Text("Huế!",
                       style: TextStyle(
                           fontSize: 65,
                           fontWeight: FontWeight.bold,
                           fontFamily: "Montserrat-Regular",
                           color: Color.fromARGB(255, 0, 0, 3))),
                   RichText(
-                    text: TextSpan(
+                    text: const TextSpan(
                       text: "Kinh Đô Xưa- ",
                       style: TextStyle(
                           fontSize: 38,
@@ -55,10 +55,11 @@ class Body extends StatelessWidget {
                       ],
                     ),
                   ),
+                  const SizedBox(height: 30,),
                   RichText(
-                      text: TextSpan(
+                      text: const TextSpan(
                     text:
-                        "                                                                                                                               Nơi tinh hoa hội tụ, điểm giao thoa giữa hiện đại và cổ kính. ",
+                        "Nơi tinh hoa hội tụ, điểm giao thoa giữa hiện đại và cổ kính. ",
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 18,
